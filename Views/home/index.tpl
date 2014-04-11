@@ -11,7 +11,7 @@
 {% endblock %} 
 
 {% block main %}
-<div class="container">
+<div class="container-fluid">
     <div class="transparentBlackBg rounded well ui-shadow">
         <div class="row">
             <div class="col-md-12">

@@ -5,19 +5,28 @@
                 <th>
                     Ressources
                 </th> 
-        {% for oRessource in oRessources %}
+        {% for oGroup in oGroups %}
                 <th>
-                    {{oRessource.name}}
+                    {{oGroup.name}}
                 </th> 
         {% endfor %}
             </tr>
         </thead>
         <tbody>
-        {% for oGroup in oGroups %}
+        {% for oRessource, oPermissions in oRessources %}
             <tr>
                 <td>
-                    {{oGroup.name}}
+                    {{oRessource.name}}
                 </td> 
+        {% for oGroup in oGroups %}
+                <td>
+                {% for oPermission in oPermissions %}
+                    {% if oPermission.group_idgroup === oGroup.idgroup && oPermission.ressource_idressource === oRessource.idressource %}
+                        {{oPermission}}
+                    {% endif %}
+                {% endfor %}
+                </td> 
+        {% endfor %}
             </tr>
         {% endfor %}
         </tbody>

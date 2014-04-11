@@ -23,11 +23,16 @@ class BundlesController extends \Library\Core\Auth
 
     public function deployAssetsAction()
     {
-        die(var_dump(\Library\Core\App::deployBundlesAssets()));
+        die(var_dump(\Library\Core\Assets::deploy()));
     }
 
     public function buildAssetsAction()
     {
         die(var_dump(\Library\Core\App::buildAssets()));
+    }
+
+    public function clearCacheAction()
+    {
+        die(var_dump(\Library\Core\App::clearCache()));
     }
 }
