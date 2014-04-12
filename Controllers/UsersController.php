@@ -21,7 +21,7 @@ class UsersController extends \Library\Core\Auth
         $oUsers->load();
         $this->aView['oUsers'] = $oUsers;
 
-        $this->render('users/index.tpl');
+        $this->oView->render($this->aView, 'users/index.tpl');
     }
 }
 

@@ -29,6 +29,6 @@ class HomeController extends \Library\Core\Auth
         $this->aView['aBundles'] = \Library\Core\App::getBundles();
         $this->aView['iBundlesCount'] = count($this->aView['aBundles']);
 
-        $this->render('home/index.tpl');
+        $this->oView->render($this->aView, 'home/index.tpl');
     }
 }

@@ -17,18 +17,10 @@ class BundlesController extends \Library\Core\Auth
 
     public function indexAction()
     {
-        $this->aView['aBundles'] = \Library\Core\App::getBundles();
-        $this->render('bundles/index.tpl');
-    }
-
-    public function deployAssetsAction()
-    {
-        die(var_dump(\Library\Core\Assets::deploy()));
-    }
-
-    public function buildAssetsAction()
-    {
-        die(var_dump(\Library\Core\App::buildAssets()));
+        $oBundles = new \Library\Core\Bundles();
+        $this->aView['aBundles'] = $oBundles->get();
+        die(var_dump($oBundles->get()));
+        $this->oView->render($this->aView, 'bundles/index.tpl');
     }
 
     public function clearCacheAction()

@@ -18,6 +18,6 @@ class EntitiesController extends \Library\Core\Auth
     public function indexAction()
     {
         $this->aView['aEntities'] = \Library\Core\App::buildEntities();
-        $this->render('entities/index.tpl');
+        $this->oView->render($this->aView, 'entities/index.tpl');
     }
 }
