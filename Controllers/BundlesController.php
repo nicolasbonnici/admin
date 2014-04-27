@@ -19,7 +19,6 @@ class BundlesController extends \Library\Core\Auth
     {
         $oBundles = new \Library\Core\Bundles();
         $this->aView['aBundles'] = $oBundles->get();
-        die(var_dump($oBundles->get()));
         $this->oView->render($this->aView, 'bundles/index.tpl');
     }
 

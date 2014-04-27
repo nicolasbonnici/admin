@@ -8,7 +8,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for sBundleName, aBundleControllers in aBundles %}
+        {% for sBundleName, aBundleDetails in aBundles %}
             <tr>
                 <td>
                     {{sBundleName}}
