@@ -60,7 +60,15 @@
                                 <p class="list-group-item-text">
                                     <a href="#" class="ui-sendxhr" data-url="/admin/acl" data-selector="#setupMain"
                                         title="{{tr['acl_managment_tip']}}" data-placement="right"> <span
-                                        class="glyphicon glyphicon-lock"></span> {{tr['acl_managment']}}
+                                        class="glyphicon glyphicon-warning-sign"></span> {{tr['acl_managment']}}
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="list-group-item">
+                                <p class="list-group-item-text">
+                                    <a href="#" class="ui-sendxhr" data-url="/admin/backup" data-selector="#setupMain"
+                                        title="{{tr['backup_managment_tip']}}" data-placement="right"> <span
+                                        class="glyphicon glyphicon-floppy-disk"></span> {{tr['backup_managment']}}
                                     </a>
                                 </p>
                             </div>

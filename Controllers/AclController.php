@@ -33,7 +33,6 @@ class AclController extends \Library\Core\Auth
 
         $oGlobalGroupsCollection = new \app\Entities\Collection\GroupCollection();
         $oGlobalGroupsCollection->load(); // !!
-
         $this->aView['oRessources'] = $oGlobalRessourcesCollection;
         $this->aView['oGroups'] = $oGlobalGroupsCollection;
         $this->oView->render($this->aView, 'acl/index.tpl');

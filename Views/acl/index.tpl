@@ -13,14 +13,14 @@
             </tr>
         </thead>
         <tbody>
-        {% for oRessource, oPermissions in oRessources %}
+        {% for oRessource in oRessources %}
             <tr>
                 <td>
                     {{oRessource.name}}
                 </td> 
         {% for oGroup in oGroups %}
                 <td>
-                {% for oPermission in oPermissions %}
+                {% for oPermission in oRessource.oPermissionsCollection %}
                     {% if oPermission.group_idgroup === oGroup.idgroup && oPermission.ressource_idressource === oRessource.idressource %}
                         {{oPermission}}
                     {% endif %}
