@@ -19,6 +19,11 @@ class UsersController extends \Library\Core\Auth
     {
         $oUsers = new \app\Entities\Collection\UserCollection();
         $oUsers->load();
+
+        foreach ($oUsers as $oUser) {
+//             $oRole loader le role et le passer a l objet de la collection envoyé à la vue
+        }
+
         $this->aView['oUsers'] = $oUsers;
 
         $this->oView->render($this->aView, 'users/index.tpl');
