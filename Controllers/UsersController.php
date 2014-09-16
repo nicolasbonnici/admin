@@ -17,7 +17,7 @@ class UsersController extends \Library\Core\Auth
 
     public function indexAction()
     {
-        $oUsers = new \app\Entities\Collection\UserCollection();
+        $oUsers = new \bundles\user\Entities\Collection\UserCollection();
         $oUsers->load();
 
         foreach ($oUsers as $oUser) {

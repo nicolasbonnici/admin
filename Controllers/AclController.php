@@ -31,7 +31,7 @@ class AclController extends \Library\Core\Auth
             }
         }
 
-        $oGlobalGroupsCollection = new \app\Entities\Collection\GroupCollection();
+        $oGlobalGroupsCollection = new \bundles\user\Entities\Collection\GroupCollection();
         $oGlobalGroupsCollection->load(); // !!
         $this->aView['oRessources'] = $oGlobalRessourcesCollection;
         $this->aView['oGroups'] = $oGlobalGroupsCollection;
