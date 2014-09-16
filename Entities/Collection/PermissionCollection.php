@@ -3,7 +3,7 @@
 namespace bundles\admin\Entities\Collection;
 
 /**
- * Permission
+ *  ACL's permission
  *
  * @author infradmin
  */
