@@ -19,7 +19,6 @@ class AssetsController extends \Library\Core\Auth
     public function indexAction()
     {
         $oAssets = new \Library\Core\Assets();
-        $oAssets->load();
         die(var_dump($oAssets->get(), $oAssets->build()));
     }
 
