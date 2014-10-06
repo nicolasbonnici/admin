@@ -20,7 +20,7 @@ class AclController extends \Library\Core\Auth
     {
 
         // @todo Only load entities that user can manage, update permission entities json object structure
-        $oGlobalRessourcesCollection = new \app\Entities\Collection\RessourceCollection();
+        $oGlobalRessourcesCollection = new \bundles\admin\Entities\Collection\RessourceCollection();
         $oGlobalRessourcesCollection->load(); // @todo Securiser ce genre de traitement pour le big data
         foreach ($oGlobalRessourcesCollection as $oRessource) {
             $oRessource->oPermissionsCollection =  new \app\Entities\Collection\PermissionCollection();
